@@ -1,0 +1,78 @@
+// =======================================
+//   List of variables for Preset color
+// =======================================
+
+$preset-colors: (
+  preset-1: (
+    body: #e3f2fd,
+    primary: #2196f3,
+    primary-dark: #1C76DA,
+    secondary: #673ab7,
+    secondary-dark: #542CA7
+  ),
+  preset-2: (
+    body: #eceff1,
+    primary: #607d8b,
+    primary-dark: #4E6A78,
+    secondary: #009688,
+    secondary-dark: #008375
+  ),
+  preset-3: (
+    body: #ecedf1,
+    primary: #203461,
+    primary-dark: #18274F,
+    secondary: #ec407a,
+    secondary-dark: #E73267
+  ),
+  preset-4: (
+    body: #eceff1,
+    primary: #16595a,
+    primary-dark: #104848,
+    secondary: #c77e23,
+    secondary-dark: #BA6B1A
+  ),
+  preset-5: (
+    body: #e3e8e8,
+    primary: #173e43,
+    primary-dark: #113034,
+    secondary: #3fb0ac,
+    secondary-dark: #31A09B
+  ),
+  preset-6: (
+    body: #e2e5e8,
+    primary: #0a2342,
+    primary-dark: #071A33,
+    secondary: #2ca58d,
+    secondary-dark: #21937A
+  ),
+  preset-7: (
+    body: #eeedfd,
+    primary: #3f51b5,
+    primary-dark: #3140A5,
+    secondary: #3f51b5,
+    secondary-dark: #3140A5
+  )
+);
+$dark-preset-colors: (
+  preset-1: (
+    body: #111
+  ),
+  preset-2: (
+    body: #0e1b23
+  ),
+  preset-3: (
+    body: #0a0f23
+  ),
+  preset-4: (
+    body: #010606
+  ),
+  preset-5: (
+    body: #030708
+  ),
+  preset-6: (
+    body: #051327
+  ),
+  preset-7: (
+    body: #1a223f
+  )
+);
