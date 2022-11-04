@@ -33,7 +33,6 @@
     "browser-sync": "^2.26.3",
     "clipboard": "^2.0.8",
     "del": "^6.1.1",
-    "feather-icons": "^4.25.0",
     "gulp-file-include": "^2.0.1",
     "gulp-sourcemaps": "^2.6.5",
     "simplebar": "^5.3.8",

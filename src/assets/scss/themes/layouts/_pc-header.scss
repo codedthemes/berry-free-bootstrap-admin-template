@@ -47,6 +47,7 @@
     }
 
     .icon-search {
+      font-size: 18px;
       position: absolute;
       top: 15px;
       left: 15px;
@@ -194,11 +195,6 @@
   }
 
   .pc-h-dropdown {
-    .fa-circle {
-      font-size: 5px;
-      vertical-align: middle;
-    }
-
     transform: none !important;
     top: 100% !important;
 

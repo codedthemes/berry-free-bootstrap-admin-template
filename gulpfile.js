@@ -36,7 +36,6 @@ gulp.task("build", function () {
       "node_modules/bootstrap/dist/js/bootstrap.min.js",
       "node_modules/@popperjs/core/dist/umd/popper.min.js",
       "node_modules/simplebar/dist/simplebar.min.js",
-      "node_modules/feather-icons/dist/feather.min.js",
       "node_modules/clipboard/dist/clipboard.min.js",
       "node_modules/apexcharts/dist/apexcharts.min.js",
     ],

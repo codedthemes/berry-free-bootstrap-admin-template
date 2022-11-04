@@ -11,7 +11,6 @@ window.addEventListener('resize', function () {
     if (docW > 1024) {
         document.querySelector('.pc-navbar').innerHTML = pc_link;
         set_horizontal_menu();
-        feather.replace();
         set_edge_menu();
     }
 });
@@ -36,7 +35,7 @@ function set_horizontal_menu() {
                             <span class="pc-mtext">'+
                         flag_item_extra.children[0].innerHTML +
                         '</span>\
-                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>\
+                            <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>\
                         </a>\
                         <ul class="pc-submenu">' +
                         pc_new_list +
@@ -68,7 +67,7 @@ function set_horizontal_menu() {
                                 <span class="pc-mtext">'+
                             flag_item_extra.children[0].innerHTML +
                             '</span>\
-                                <span class="pc-arrow"><i data-feather="chevron-right"></i></span>\
+                                <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>\
                             </a>\
                             <ul class="pc-submenu">' +
                             pc_new_list +
@@ -110,7 +109,7 @@ function set_horizontal_menu() {
                           <a href="#!" class="pc-link ">\
                               <span class="pc-micon"><i class="ti ti-archive"></i></span>\
                               <span class="pc-mtext">Other</span>\
-                              <span class="pc-arrow"><i data-feather="chevron-right"></i></span>\
+                              <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>\
                           </a>\
                           <ul class="pc-submenu">' +
                     pc_new_list +

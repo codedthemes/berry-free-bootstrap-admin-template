@@ -337,16 +337,6 @@ pre[class*="language-"] {
 
 /* ================================    Blockquote Start  ===================== */
 
-svg.feather {
-  &:not([class*="wid-"]) {
-    width: 20px;
-  }
-
-  &:not([class*="hei-"]) {
-    height: 20px;
-  }
-}
-
 @media (min-width: 1600px) {
   .container {
     max-width: 1540px;
