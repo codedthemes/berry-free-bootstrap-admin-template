@@ -1,7 +1,7 @@
 # Berry Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/blob/main/LICENSE)
+[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/blob/master/LICENSE)
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/berry-free-bootstrap-admin-template)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/)
 
 
