@@ -5,14 +5,14 @@
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/berry-free-bootstrap-admin-template)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/)
 
 
-Berry is a free Bootstrap admin dashboard template. It is meant to provide the best possible User Experience with highly customizable feature-rich pages. It is a complete Dashboard Template that has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
+Berry is a free Bootstrap admin dashboard template. It is designed to deliver the best possible user experience with highly customizable feature-rich pages. Berry has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme  :star: :star: :star:
 
-![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-repo-1.jpg)
+![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-bootstrap-repo-1.jpg)
 
 
-[Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Berry react template contains features like Seed versions, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
+[Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Berry react template contains features like Mutiple Layouts, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
 | [Berry Free](https://berrydashboard.io/bootstrap/free/)    | [Berry](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
 | ---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------|
@@ -24,12 +24,12 @@ Berry is a free Bootstrap admin dashboard template. It is meant to provide the b
 | -                                                                                        | ✓ 6+ color Options                                                       |
 | -                                                                                        | ✓ RTL                                                                    |
 | -                                                                                        | ✓ JWT, Firebase, Auth0 authentications                                   |
-| -                                                                                        | ✓ [More components](https://berrydashboard.io/dashboard/default)         |  
+| -                                                                                        | ✓ [More components](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)         |  
 
 
 ## Why Berry?
 
-Berry offers everything you need to create dashboards. We have included the following high-end features in our initial release:
+Get started with a sweet set of features including:
 
  * Modern aesthetics UI design
  * Bootstrap components
@@ -38,12 +38,12 @@ Berry offers everything you need to create dashboards. We have included the foll
  * Flexible & High-Performance code
  * Easy Documentation Guide
 
-## Free Berry version
+## Free Berry Bootstrap 5 version
 
  - [Preview](https://berrydashboard.io/bootstrap/free/)
  - [Download from Github](https://github.com/codedthemes/berry-free-bootstrap-admin-template)
  
-## Berry Pro version
+## Berry Pro Bootstap 5 version
 
  - [Preview](https://berrydashboard.io/bootstrap/default/dashboard/index.html)
  - [Purchase from CodedThemes](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)
@@ -74,7 +74,8 @@ git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git
 
  - Bootstrap 5
  - No Jquery
- 
+ - npm/yarn package installer
+ - Gulp support
 
 ## Author
 
@@ -88,22 +89,25 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
  - Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
 
-## Berry - Nodejs version by Appseed
+## Berry EcoSystem
 
-- [Free Nodejs](https://appseed.us/product/react-node-js-berry-dashboard)
-- [Premium Berry Nodejs](https://appseed.us/full-stack/react-berry-dashboard)
+ - [Free Berry React](https://github.com/codedthemes/berry-free-react-admin-template) | [Berry React Pro](https://mui.com/store/items/berry-react-material-admin/)
+ - [Free Berry Angular](https://github.com/codedthemes/berry-free-angular-admin-template) | [Berry Angular Pro](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)
+ - [Free Berry Bootstrap](https://github.com/codedthemes/berry-free-bootstrap-admin-template) | [Berry Bootstrap Pro](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)
+ - [Free Berry Nodejs](https://appseed.us/product/react-node-js-berry-dashboard) | [Berry Nodejs Pro](https://appseed.us/full-stack/react-berry-dashboard)
 
-## More Free React Material Admin Templates
 
- - [Free Materially](https://codedthemes.com/item/materially-free-reactjs-admin-template/)
- - [Free Mantis](https://mantisdashboard.io/free/)
+## More Free Bootstrap Admin Templates
 
-[![IMG_8566.jpg](https://camo.githubusercontent.com/a2364ad8c498b2a7378dae5e1a5eb5d8e1fcb2d6ceeb8b54acdc2e8bc2508775/68747470733a2f2f6d616e74697364617368626f6172642e696f2f6164762d62616e6e65722d696d616765732f6f672d736f6369616c2e706e67)](https://mantisdashboard.io/free/)
+ - [Free Datta Able](https://codedthemes.com/item/datta-able-bootstrap-lite/)
+ - [Free Gradient Able](https://codedthemes.com/item/gradient-able-bootstrap-lite/)
+ - [Free Flash Able](https://codedthemes.com/item/flash-able-free-admin-template/)
 
-## More Premium React Material Admin Templates
+## More Premium Bootstrap Admin Templates
 
- - [Mantis](https://mui.com/store/items/mantis-react-admin-dashboard-template/)
- - [Materially](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
+ - [Datta Able Pro](https://codedthemes.com/item/datta-able-bootstrap-admin-template/)
+ - [Gradient Able Pro](https://codedthemes.com/item/gradient-able-admin-template/)
+ - [Able Pro](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403)
  
 ## Follow us
  - [Website](https://berrydashboard.io)
