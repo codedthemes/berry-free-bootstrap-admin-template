@@ -65,6 +65,11 @@ Clone from Github
 ```
 git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git
 ```
+- Run Yarn
+- Run Gulp
+
+OR
+- Goto /dist and open `index.html`
 
 ## Documentation
 
