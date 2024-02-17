@@ -1,5 +1,5 @@
 /**  =====================
-      Generic-class css start
+    1. Generic-class css start
 ========================== **/
 /*====== Padding , Margin css starts ======*/
 $i: 0;
@@ -138,20 +138,27 @@ $i: 1;
   }
 }
 /*====== border color css ends ======*/
+/*====== brand color css start ======*/
+@each $color, $value in $brand-colors {
+  .bg-#{$color} {
+    background: $value;
+  }
+}
+/*====== brand color css ends ======*/
 /*====== text-color, background color css starts ======*/
 $social-colors: (
-  'facebook': #4267b2,
-  'twitter': #42c0fb,
-  'dribbble': #ec4a89,
-  'pinterest': #bf2131,
-  'youtube': #e0291d,
-  'googleplus': #c73e2e,
-  'instagram': #aa7c62,
-  'viber': #7b519d,
-  'behance': #0057ff,
-  'dropbox': #3380ff,
-  'linkedin': #0077b5,
-  'amazon': #000000
+  "facebook": #4267b2,
+  "twitter": #42c0fb,
+  "dribbble": #ec4a89,
+  "pinterest": #bf2131,
+  "youtube": #e0291d,
+  "googleplus": #c73e2e,
+  "instagram": #aa7c62,
+  "viber": #7b519d,
+  "behance": #0057ff,
+  "dropbox": #3380ff,
+  "linkedin": #0077b5,
+  "amazon": #000000,
 );
 @each $color, $value in $social-colors {
   .bg-light-#{$color} {
@@ -159,11 +166,26 @@ $social-colors: (
     color: $value;
   }
   .bg-#{$color} {
-    background: $value !important;
+    background: $value;
   }
 
   .text-#{$color} {
     color: $value;
+  }
+  .btn-#{$color} {
+    background: $value;
+    color: #fff;
+    
+    &:hover,
+    &.focus,
+    &:focus,
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background:  lighten($value, 5%);
+      color: #fff;
+      border-color:  lighten($value, 5%);
+    }
   }
 }
 /*====== text-color css ends ======*/
@@ -279,8 +301,6 @@ $social-colors: (
 .normal-case {
   text-transform: none !important;
 }
-
-
 /*====== more bootstrap colors start ======*/
 $more-colors: (
   'blue': (
@@ -418,3 +438,6 @@ $more-colors: (
   }
 }
 /*====== more bootstrap colors end ======*/
+/**  =====================
+    1. Generic-class css end
+========================== **/

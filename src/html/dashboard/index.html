@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- [Head] start -->
   <head>
-    @@include('../layouts/head-page-meta.html', {'title': ''}) @@include('../layouts/head-css.html')
+    @@include('../layouts/head-page-meta.html', {'title': 'Dashboard'}) @@include('../layouts/head-css.html')
   </head>
   <!-- [Head] end -->
   <!-- [Body] Start -->
@@ -29,7 +29,7 @@
                   <div class="col-auto">
                     <div class="btn-group">
                       <a
-                        type="button"
+                        href="#"
                         class="avtar bg-secondary dropdown-toggle arrow-none"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -37,8 +37,8 @@
                         <i class="ti ti-dots"></i>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><button class="dropdown-item" type="button">Import Card</button></li>
-                        <li><button class="dropdown-item" type="button">Export</button></li>
+                        <li><button class="dropdown-item">Import Card</button></li>
+                        <li><button class="dropdown-item">Export</button></li>
                       </ul>
                     </div>
                   </div>
@@ -67,7 +67,6 @@
                           id="chart-tab-home-tab"
                           data-bs-toggle="pill"
                           data-bs-target="#chart-tab-home"
-                          type="button"
                           role="tab"
                           aria-controls="chart-tab-home"
                           aria-selected="true"
@@ -80,7 +79,6 @@
                           id="chart-tab-profile-tab"
                           data-bs-toggle="pill"
                           data-bs-target="#chart-tab-profile"
-                          type="button"
                           role="tab"
                           aria-controls="chart-tab-profile"
                           aria-selected="false"
@@ -94,7 +92,7 @@
                   <div class="tab-pane show active" id="chart-tab-home" role="tabpanel" aria-labelledby="chart-tab-home-tab" tabindex="0">
                     <div class="row">
                       <div class="col-6">
-                        <span class="text-white d-block f-34 f-w-500 my-2">$130<i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
+                        <span class="text-white d-block f-34 f-w-500 my-2">$1305 <i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
                         <p class="mb-0 opacity-50">Total Earning</p>
                       </div>
                       <div class="col-6">
@@ -277,7 +275,7 @@
       </div>
     </div>
     <!-- [ Main Content ] end -->
-    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') 
 
     <!-- [Page Specific JS] start -->
     <!-- Apex Chart -->

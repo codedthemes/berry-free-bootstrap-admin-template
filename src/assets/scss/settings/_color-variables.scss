@@ -1,0 +1,196 @@
+// =======================================
+//   List of variables for Preset color
+// =======================================
+$brand-color1 : linear-gradient(83.31deg, #1DE9B6 21.22%, #1DC4E9 88.54%);
+$brand-color2 : linear-gradient(206.48deg, #A389D4 11.14%, #899ED4 104.6%);
+$brand-color3 : linear-gradient(207.92deg, #0398F2 11.42%, #38B9E7 106.55%);
+$brand-color4 : linear-gradient(162.57deg, #C5ECF9 11.95%, #C4B4E4 97.32%);
+
+$preset-colors: (
+  preset-1: (
+    body: #e3f2fd,
+    primary: #2196f3,
+    primary-dark: #1C76DA,
+    secondary: #673ab7,
+    secondary-dark: #542CA7
+  ),
+  preset-2: (
+    body: #eceff1,
+    primary: #607d8b,
+    primary-dark: #4E6A78,
+    secondary: #009688,
+    secondary-dark: #008375
+  ),
+  preset-3: (
+    body: #ecedf1,
+    primary: #203461,
+    primary-dark: #18274F,
+    secondary: #ec407a,
+    secondary-dark: #E73267
+  ),
+  preset-4: (
+    body: #eceff1,
+    primary: #16595a,
+    primary-dark: #104848,
+    secondary: #c77e23,
+    secondary-dark: #BA6B1A
+  ),
+  preset-5: (
+    body: #e3e8e8,
+    primary: #173e43,
+    primary-dark: #113034,
+    secondary: #3fb0ac,
+    secondary-dark: #31A09B
+  ),
+  preset-6: (
+    body: #e2e5e8,
+    primary: #0a2342,
+    primary-dark: #071A33,
+    secondary: #2ca58d,
+    secondary-dark: #21937A
+  ),
+  preset-7: (
+    body: #eeedfd,
+    primary: #3f51b5,
+    primary-dark: #3140A5,
+    secondary: #3f51b5,
+    secondary-dark: #3140A5
+  )
+);
+$dark-preset-colors: (
+  preset-1: (
+    body: #111936
+  ),
+  preset-2: (
+    body: #0e1b23
+  ),
+  preset-3: (
+    body: #0a0f23
+  ),
+  preset-4: (
+    body: #010606
+  ),
+  preset-5: (
+    body: #030708
+  ),
+  preset-6: (
+    body: #051327
+  ),
+  preset-7: (
+    body: #1a223f
+  )
+);
+
+$blue-100: #BEDCF6;
+$blue-200: #93C4F1;
+$blue-300: #67ACEB;
+$blue-400: #479BE6;
+$blue-500: #2689E2;
+$blue-600: #2281DF;
+$blue-700: #1C76DA;
+$blue-800: #176CD6;
+$blue-900: #0D59CF;
+
+$indigo-100: #D1B7FB;
+$indigo-200: #B388F9;
+$indigo-300: #9458F6;
+$indigo-400: #7D34F4;
+$indigo-500: #6610F2;
+$indigo-600: #5E0EF0;
+$indigo-700: #530CEE;
+$indigo-800: #4909EC;
+$indigo-900: #3805E8;
+
+$purple-100: #D1C4E9;
+$purple-200: #B39DDB;
+$purple-300: #9575CD;
+$purple-400: #7E58C2;
+$purple-500: #673AB7;
+$purple-600: #5F34B0;
+$purple-700: #542CA7;
+$purple-800: #4A259F;
+$purple-900: #391890;
+
+$pink-100: #F8C5DD;
+$pink-200: #F49FC6;
+$pink-300: #EF78AF;
+$pink-400: #EB5B9D;
+$pink-500: #E83E8C;
+$pink-600: #E53884;
+$pink-700: #E23079;
+$pink-800: #DE286F;
+$pink-900: #D81B5C;
+
+$red-100: #FCC7C3;
+$red-200: #FAA19B;
+$red-300: #F77B72;
+$red-400: #F65F54;
+$red-500: #F44336;
+$red-600: #F33D30;
+$red-700: #F13429;
+$red-800: #EF2C22;
+$red-900: #EC1E16;
+
+$orange-100: #FED8B9;
+$orange-200: #FEBF8A;
+$orange-300: #FEA55B;
+$orange-400: #FD9137;
+$orange-500: #FD7E14;
+$orange-600: #FD7612;
+$orange-700: #FC6B0E;
+$orange-800: #FC610B;
+$orange-900: #FC4E06;
+
+$yellow-100: #FFECB5;
+$yellow-200: #FFE083;
+$yellow-300: #FFD451;
+$yellow-400: #FFCA2C;
+$yellow-500: #FFC107;
+$yellow-600: #FFBB06;
+$yellow-700: #FFB305;
+$yellow-800: #FFAB04;
+$yellow-900: #FF9E02;
+
+$green-100: #B3EFCB;
+$green-200: #80E4A9;
+$green-300: #4DD987;
+$green-400: #26D06D;
+$green-500: #00C853;
+$green-600: #00C24C;
+$green-700: #00BB42;
+$green-800: #00B439;
+$green-900: #00A729;
+
+$teal-100: #BCEFE0;
+$teal-200: #90E4CB;
+$teal-300: #63D9B6;
+$teal-400: #41D1A7;
+$teal-500: #20C997;
+$teal-600: #1CC38F;
+$teal-700: #18BC84;
+$teal-800: #13B57A;
+$teal-900: #0BA969;
+
+$cyan-100: #C5EFF3;
+$cyan-200: #9FE4EB;
+$cyan-300: #78D9E2;
+$cyan-400: #5BD1DC;
+$cyan-500: #3EC9D6;
+$cyan-600: #38C3D1;
+$cyan-700: #30BCCC;
+$cyan-800: #28B5C6;
+$cyan-900: #1BA9BC;
+
+
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+$dark: #111936;

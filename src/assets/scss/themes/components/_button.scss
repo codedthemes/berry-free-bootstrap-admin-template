@@ -1,5 +1,5 @@
 // ============================
-//     Button css start
+//    13. Button css start
 // ============================
 
 .btn {
@@ -7,6 +7,9 @@
 
   i {
     font-size: 18px;
+    &.ph-duotone{
+      vertical-align: text-bottom;
+    }
   }
 
   svg {
@@ -32,8 +35,41 @@
       font-size: 14px;
     }
   }
+  &.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    &.avtar-xs {
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+    }
+    &.avtar-s {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+    }
+    &.avtar-l {
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+    }
+    &.avtar-xl {
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      border-radius: 30px;
+    }
+  }
 }
 @each $color, $value in $theme-colors {
+  // light color start
   .btn-light-#{$color} {
     background: shift-color($value, $soft-bg-level);
     color: $value;
@@ -84,7 +120,8 @@
       }
     }
   }
-
+  // light color end
+  // link color start
   .btn-link-#{$color} {
     background: transparent;
     color: $value;
@@ -122,6 +159,46 @@
       border-color: shift-color($value, $soft-bg-level);
     }
   }
+  // link color end
+  // link hover color start
+  .btn-link-hover-#{$color} {
+    background: transparent;
+    color: var(--bs-secondary);
+    border-color: transparent;
+    .material-icons-two-tone {
+      background-color: var(--bs-secondary);
+    }
+    &:hover {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &.focus,
+    &:focus {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+
+  .btn-check:active,
+  .btn-check:checked {
+    + .btn-link-hover-#{$color} {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+  // link hover color end
 }
 
 @each $color, $value in $social-colors {
@@ -134,7 +211,6 @@
     }
 
     &:hover {
-      background-color: $value;
       background: $value;
       color: #fff;
       border-color: $value;
@@ -145,7 +221,6 @@
 
     &.focus,
     &:focus {
-      background-color: $value;
       background: $value;
       color: #fff;
       border-color: $value;
@@ -157,7 +232,6 @@
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     .show > &.dropdown-toggle {
-      background-color: $value;
       background: $value;
       color: #fff;
       border-color: $value;
@@ -167,3 +241,12 @@
     }
   }
 }
+.btn-pc-default {
+  &:not(:hover) {
+    color: var(--bs-secondary);
+  }
+}
+
+// ============================
+//    13. Button css end
+// ============================

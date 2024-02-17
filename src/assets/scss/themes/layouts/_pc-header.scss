@@ -1,13 +1,13 @@
 // ============================
-//     header css start
+//   4. header css start
 // ============================
 
 .pc-header {
-  background: $header-background;
-  color: $header-color;
+  background: var(--pc-header-background);
+  color: var(--pc-header-color);
   min-height: $header-height;
   position: fixed;
-  left: 0;
+  left: $sidebar-width;
   right: 0;
   z-index: 1025;
   display: flex;
@@ -30,6 +30,9 @@
     display: flex;
     padding: 0 20px;
     flex-grow: 1;
+    @include media-breakpoint-down(sm) { 
+      padding: 0 15px;
+    }
   }
 
   .header-search {
@@ -47,7 +50,6 @@
     }
 
     .icon-search {
-      font-size: 18px;
       position: absolute;
       top: 15px;
       left: 15px;
@@ -65,10 +67,6 @@
       height: 34px;
       border-radius: $border-radius;
     }
-
-    // @media (max-width: 1024px){
-    //     margin: 0 15px;
-    // }
   }
 
   .pc-h-item {
@@ -79,7 +77,6 @@
   }
 
   .pc-head-link {
-    color: $header-color;
     margin: 0 16px;
     position: relative;
     font-weight: 500;
@@ -120,7 +117,7 @@
 
       &.material-icons-two-tone {
         font-size: 24px;
-        background-color: $header-color;
+        background-color: var(--pc-header-color);
       }
     }
 
@@ -136,18 +133,6 @@
       text-decoration: none;
       color: $secondary;
       background: shift-color($secondary, $soft-bg-level);
-
-      .hamburger {
-        .hamburger-inner {
-          background-color: $secondary;
-
-          &::after,
-          &::before {
-            background-color: $secondary;
-          }
-        }
-      }
-
       i.material-icons-two-tone {
         background-color: $secondary;
       }
@@ -159,6 +144,7 @@
       right: 10px;
       border-radius: 50%;
       font-size: 9px;
+      z-index: 9;
 
       &.dots {
         width: 9px;
@@ -190,11 +176,16 @@
         weight: 400;
       }
 
-      color: transparentize($header-color, 0.3);
+      color: var(--pc-header-color);
     }
   }
 
   .pc-h-dropdown {
+    .fa-circle {
+      font-size: 5px;
+      vertical-align: middle;
+    }
+
     transform: none !important;
     top: 100% !important;
 
@@ -208,7 +199,7 @@
     position: relative;
 
     &:hover {
-      > .dropdown-menu {
+      >.dropdown-menu {
         display: block;
         left: 100%;
         top: -18px !important;
@@ -227,7 +218,7 @@
 
     .pc-mega-dmenu {
       transform: none !important;
-      left: calc(#{$sidebar-width} + 20px) !important;
+      left: 20px !important;
       right: 40px !important;
       top: 100% !important;
       padding: 0;
@@ -322,6 +313,7 @@
 
       .user-avtar {
         width: 34px;
+        transition: all 0.08s cubic-bezier(0.37, 0.24, 0.53, 0.99);
       }
 
       @include media-breakpoint-down(sm) {
@@ -331,7 +323,8 @@
           margin-right: 0;
         }
 
-        > span > i {
+        >span,
+        >span>i {
           display: none;
         }
       }
@@ -413,6 +406,7 @@
     max-width: 100%;
 
     .list-group-item-action {
+
       &:active,
       &:hover,
       &:focus {
@@ -440,7 +434,6 @@
     }
 
     .notification-file {
-      //padding: 24px;
       display: flex;
       align-items: center;
 
@@ -449,29 +442,56 @@
         margin-right: 16px;
       }
     }
+
+    .card {
+      cursor: pointer;
+
+      &:hover {
+        background: var(--pc-active-background);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      min-width: 100%;
+    }
   }
 }
-.pc-mob-header {
-  display: none;
-  background: $brand-color;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 1026;
-  left: 0;
-  right: 0;
-  padding: 0 10px 0 30px;
 
-  .hamburger-inner,
-  .hamburger-inner::after,
-  .hamburger-inner::before {
-    background: #fff;
+.drp-upgrade-card {
+  background-size: cover;
+
+  .user-group {
+
+    .avtar,
+    img {
+      font-size: 14px;
+    }
   }
+}
 
-  .pc-head-link,
-  a {
-    color: #fff;
+.user-group {
+  display: inline-flex;
+  align-items: center;
+
+  .avtar,
+  img {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.1s ease-in-out;
+    border: 2px solid $card-bg;
+
+    +.avtar,
+    +img {
+      margin-left: -14px;
+    }
+
+    &:hover {
+      z-index: 5;
+    }
   }
 }
 
@@ -498,20 +518,7 @@
   }
 }
 
-@media (min-width: 1025px) {
-  .pc-header {
-    z-index: 1027;
-    .header-mobile-collapse {
-      display: none;
-    }
-  }
-}
-
 @media (max-width: 1024px) {
-  .pc-mob-header {
-    display: none;
-  }
-
   .pc-header {
     top: 0;
     left: 0;
@@ -521,20 +528,12 @@
       display: none;
     }
 
-    // .user-avtar {
-    //     margin-right: 0;
-    // }
-
     .pc-head-link {
+
       .user-desc,
       .user-name {
         display: none;
       }
-
-      // &#mobile-collapse {
-      //     position: absolute;
-      //     left: 10px;
-      // }
     }
 
     .pcm-logo {
@@ -549,7 +548,7 @@
       top: $header-height;
 
       .header-wrapper {
-        background: $header-background;
+        background: var(--pc-header-background);
         position: relative;
         z-index: 5;
       }
@@ -571,29 +570,8 @@
       padding-left: 30px;
     }
 
-    // .pc-mega-menu .pc-mega-dmenu .row.g-0 > .col {
-    //     flex: 100%;
-    // }
-    .pc-mega-menu .pc-mega-dmenu .row.g-0 > .col.image-block {
-      display: none;
-    }
-
     .pc-mob-drp {
-      // transition: left 0.15s ease-in-out;
-      // left: -#{$sidebar-width};
-      // width: $sidebar-width;
-      // position: fixed;
-      // top: $header-height;
-      // bottom: 0;
-      // background: $header-background;
-
       &.mob-drp-active {
-        // left: 0;
-        // z-index: 1026;
-        // box-shadow: $header-shadow;
-        // overflow-y: auto;
-        // padding: 30px 0;
-
         .pc-h-item {
           display: block;
           min-height: auto;
@@ -627,7 +605,7 @@
 }
 
 #pc-noti-home {
-  > .media {
+  >.media {
     &:hover {
       margin: -15px;
       padding: 15px;
@@ -649,6 +627,7 @@
 
 @include media-breakpoint-down(sm) {
   .pc-header {
+    min-height: 60px;
     .pc-head-link {
       padding: 0.65rem;
       margin: 0 8px;
@@ -656,13 +635,18 @@
 
     .pc-h-item {
       position: static;
+      min-height: 60px;
 
       .pc-h-dropdown {
-        left: 0 !important;
-        right: 0 !important;
+        left: 12px !important;
+        right: 12px !important;
+        min-width: calc(100vw - 24px);
+        max-width: calc(100vw - 24px);
       }
     }
   }
 }
 
-// header css end
+// ============================
+//   4. header css end
+// ============================
