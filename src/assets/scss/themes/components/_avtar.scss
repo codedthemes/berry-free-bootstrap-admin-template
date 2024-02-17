@@ -1,5 +1,5 @@
 // ============================
-//     Avtar css start
+//    11. Avtar css start
 // ============================
 
 .avtar {
@@ -18,31 +18,35 @@
     width: 16px;
     height: 16px;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 12px;
   }
 
   &.avtar-xs {
     width: 32px;
     height: 32px;
     font-size: 12px;
+    border-radius: 12px;
   }
 
   &.avtar-s {
     width: 40px;
     height: 40px;
     font-size: 14px;
+    border-radius: 12px;
   }
 
   &.avtar-l {
     width: 64px;
     height: 64px;
     font-size: 20px;
+    border-radius: 12px;
   }
 
   &.avtar-xl {
     width: 80px;
     height: 80px;
     font-size: 24px;
+    border-radius: 12px;
   }
 
   &.avtar-square {
@@ -58,4 +62,6 @@
     }
   }
 }
-// Avtar css end
+// ============================
+//    11. Avtar css end
+// ============================

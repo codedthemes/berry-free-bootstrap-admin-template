@@ -1,9 +1,9 @@
 // ============================
-//     Common layout css start
+//   6. Common layout css start
 // ============================
 
 body {
-  background-color: $sidebar-background;
+  background-color: var(--pc-sidebar-background);
 }
 
 .pc-container {
@@ -13,23 +13,28 @@ body {
   margin-left: $sidebar-width;
   margin-right: 20px;
   min-height: calc(100vh - #{$temp});
-  background: $body-bg;
+  background: var(--bs-body-bg);
   border-radius: 8px;
 
   .pc-content {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
+    @include media-breakpoint-down(xl) {
+      &.container{
+        max-width: 100%;
+      }
+    }
   }
 
-  .page-header + .row {
+  .page-header+.row {
     padding-top: 24px;
   }
-  .page-header + .pc-content {
+
+  .page-header+.pc-content {
     padding-top: calc(30px + 55px);
   }
 }
-
 
 .page-header {
   display: flex;
@@ -68,7 +73,7 @@ body {
     font-size: 13px;
 
     a {
-      color: $body-color;
+      color: var(--bs-body-color);
     }
 
     .breadcrumb-item {
@@ -76,7 +81,7 @@ body {
         color: $primary;
       }
 
-      + .breadcrumb-item::before {
+      +.breadcrumb-item::before {
         position: relative;
         top: 2px;
       }
@@ -101,7 +106,7 @@ body {
     position: relative;
   }
 
-  > .container {
+  >.container {
     z-index: 5;
     position: relative;
     margin-top: -60px;
@@ -115,7 +120,7 @@ body {
     th {
       border: none;
 
-      + th {
+      +th {
         border-radius: 5px 5px 0 0;
         padding: 20px 0;
       }
@@ -133,86 +138,18 @@ body {
     th {
       text-align: right;
 
-      + td,
-      + th {
+      +td,
+      +th {
         text-align: center;
       }
 
-      + td {
+      +td {
         border-left: 1px solid $body-bg;
       }
     }
   }
 }
-// ======= Burgur menu start
 
-.hamburger {
-  display: inline-block;
-  cursor: pointer;
-  transition: filter 0.15s linear;
-  width: 20px;
-  height: 20px;
-
-  &.is-active {
-    .hamburger-inner {
-      background-color: #000;
-
-      &::after,
-      &::before {
-        background-color: #000;
-      }
-    }
-  }
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-  width: 18px;
-  height: 2px;
-  background-color: $header-color;
-  border-radius: 4px;
-  position: absolute;
-  transition: transform 0.15s ease;
-
-  &::after,
-  &::before {
-    width: 18px;
-    height: 2px;
-    background-color: $header-color;
-    border-radius: 4px;
-    position: absolute;
-    transition: transform 0.15s ease;
-  }
-
-  &::after,
-  &::before {
-    content: '';
-    display: block;
-  }
-
-  &::before {
-    top: -6px;
-  }
-
-  &::after {
-    bottom: -6px;
-  }
-}
-
-.hamburger--arrowturn.is-active .hamburger-inner {
-  transform: rotate(-180deg);
-}
-
-.hamburger--arrowturn.is-active .hamburger-inner::before {
-  transform: translate3d(4px, 2px, 0) rotate(45deg) scale(0.7, 1);
-}
-
-.hamburger--arrowturn.is-active .hamburger-inner::after {
-  transform: translate3d(4px, -2px, 0) rotate(-45deg) scale(0.7, 1);
-}
-// ======= Burgur menu End
 @media (max-width: 1024px) {
   .pc-container {
     margin-left: 10px;
@@ -233,33 +170,36 @@ body {
     margin-left: 10px;
     margin-right: 10px;
   }
-
-  .minimenu {
-    .page-header {
-      left: 0;
-    }
-
-    .pc-container {
-      margin-left: 0;
-    }
-  }
 }
+
 @include media-breakpoint-down(sm) {
+  .col-form-label {
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
   .pc-container {
+    top: 58px;
     .pc-content {
       padding: 15px;
-      padding-left: 10px;
-      padding-right: 10px;
     }
 
     .container {
       padding-left: 0;
       padding-right: 0;
     }
+
+    .page-header+.row,
+    .page-header+.pc-content
+    {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 
   .page-header {
-    padding: 13px 20px;
+    margin-left: 0;
+    margin-right: 0;
 
     h5 {
       padding-bottom: 5px;
@@ -354,6 +294,7 @@ body {
 }
 
 .simplebar-content {
+
   &:before,
   &:after {
     content: ' ';
@@ -505,7 +446,7 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-// Common layout css end
+
 .footer-wrapper,
 .pc-content {
   &.container {
@@ -526,3 +467,6 @@ body {
     }
   }
 }
+// ============================
+//   6. Common layout css end
+// ============================

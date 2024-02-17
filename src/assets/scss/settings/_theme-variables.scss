@@ -1,50 +1,110 @@
 // =======================================
 //     List of variables for layout
 // =======================================
+:root {
+  // body
+  --#{$variable-prefix}body-bg: #{$body-bg};
+  --bs-body-bg-rgb: #{to-rgb($body-bg)};
+
+  --pc-heading-color: #{$gray-800};
+  --pc-active-background: #{$gray-200};
+
+  // Navbar
+  --pc-sidebar-background: #fff;
+  --pc-sidebar-color: #616161;
+  --pc-sidebar-color-rgb: #{to-rgb(#39465F)};
+  --pc-sidebar-submenu-border-color: var(--bs-gray-300);
+  --pc-sidebar-active-color: #{$secondary};
+  --pc-sidebar-active-color-rgb: #{to-rgb($secondary)};
+  --pc-sidebar-shadow: none;
+  --pc-sidebar-caption-color: #212121;
+  --pc-sidebar-border: none;
+
+  // header
+  --pc-header-background: #fff;
+  --pc-header-color: #616161;
+  --pc-header-shadow: none;
+
+  // card
+  --pc-card-box-shadow: none;
+
+  // horizontal menu
+  --pc-header-submenu-background: #{$white};
+  --pc-header-submenu-color: #{#111936};
+}
+[data-pc-sidebar-theme="dark"]{
+  // Navbar
+  --pc-sidebar-background: #1D2630;
+  --pc-sidebar-color: #FFFFFF;
+  --pc-sidebar-color-rgb: #{to-rgb(#FFFFFF)};
+  --pc-sidebar-submenu-border-color: var(--bs-gray-600);
+  --pc-sidebar-caption-color: #748892;
+}
 
 $header-height: 80px;
 $sidebar-width: 260px;
 $sidebar-collapsed-width: 80px;
 $sidebar-collapsed-active-width: 300px;
-
-// header
-$header-background: #fff;
-$header-color: #616161;
-$header-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-$brand-color: #161c25;
-
-// Menu
-$sidebar-background: #fff;
-$sidebar-color: #616161;
-$sidebar-active-color: $secondary;
-$sidebar-caption: #212121;
-$sidebar-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+$sidebar-tab-width: 75px;
+$sidebar-tab-navbar-width: 320px;
 
 // horizontal menu
 $topbar-height: 60px;
-$topbar-background: #111936;
-$topbar-color: #616161;
-$header-submenu-background: #fff;
-$header-submenu-color: #111936;
 
 // card block
-
-//$card-shadow: inset 0 0 0 1px rgba(144, 202, 249, 0.46);
 $card-shadow: none;
 
 $soft-bg-level: -80%;
 // =====================================
 //      Variables for dark layouts
 // =====================================
+$dark-layout-color: $gray-900;
 
-// header
-$dark-header-color: #525b69;
-$dark-header-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+// =====================================
+//      Variables for bootstrap color
+// =====================================
 
-// Menu
-$dark-sidebar-color: #bdc8f0;
-$dark-sidebar-caption: #d7dcec;
-$dark-sidebar-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+$blue: $blue-500;
+$secondary: #39465F;
+$indigo: $indigo-500;
+$purple: $purple-500;
+$pink: $pink-500;
+$red: $red-500;
+$orange: $orange-500;
+$yellow: $yellow-500;
+$green: $green-500;
+$teal: $teal-500;
+$cyan: $cyan-500;
 
-// card block
-$dark-card-shadow: inset 0 0 0 1px #111936;
+$primary-text: $blue-600;
+$secondary-text: #39465F;
+$success-text: $green-600;
+$info-text: $cyan-700;
+$warning-text: $yellow-700;
+$danger-text: $red-600;
+$light-text: #39465F;
+$dark-text: $gray-700;
+
+$primary-bg-subtle: $blue-100;
+$secondary-bg-subtle: $gray-100;
+$success-bg-subtle: $green-100;
+$info-bg-subtle: $cyan-100;
+$warning-bg-subtle: $yellow-100;
+$danger-bg-subtle: $red-100;
+$light-bg-subtle: mix($gray-100, $white);
+$dark-bg-subtle: $gray-400;
+
+$primary-border-subtle: $blue-200;
+$secondary-border-subtle: $gray-200;
+$success-border-subtle: $green-200;
+$info-border-subtle: $cyan-200;
+$warning-border-subtle: $yellow-200;
+$danger-border-subtle: $red-200;
+$light-border-subtle: $gray-200;
+$dark-border-subtle: $gray-500;
+$brand-colors:(
+  'brand-color-1' :$brand-color1,
+  'brand-color-2' :$brand-color2,
+  'brand-color-3' :$brand-color3,
+  'brand-color-4' :$brand-color4
+);

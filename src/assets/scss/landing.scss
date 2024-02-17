@@ -1,0 +1,84 @@
+/**======================================================================
+=========================================================================
+Template Name: Berry - Bootstrap Admin Template
+Author: codedthemes
+Support: https://codedthemes.authordesk.app
+File: style.css
+=========================================================================
+=================================================================================== */
+
+// main framework
+@import "settings/color-variables";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+$pc-body-bg: map-get($preset-colors, "preset-1", "body");
+$pc-blue: map-get($preset-colors, "preset-1", "primary");
+$pc-secondary: map-get($preset-colors, "preset-1", "secondary");
+@import "settings/bootstrap-variables";
+@import "settings/theme-variables";
+section {
+    padding: 100px 0;
+}
+.title {
+    margin-bottom: 50px;
+    h2 {
+        font-weight: 600;
+    }
+    h5 {
+        font-weight: 500;
+    }
+}
+.landing-page {
+    overflow-x: hidden;
+    @media (min-width: 1600px) {
+        .container {
+            max-width: 1200px;
+        }
+    }
+}
+.navbar {
+    position: fixed;
+    padding: 16px 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99;
+    backdrop-filter: blur(5px);
+    &.top-nav-collapse {
+        box-shadow: 0 8px 6px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    &.default {
+        top: 0;
+        box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+header {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+    h1 {
+        font-size: 64px;
+    }
+}
+@media (max-width: 991.98px) {
+    header {
+        text-align: center;
+        .hero-image {
+            transform: none;
+        }
+    }
+    section {
+        padding: 40px 0;
+    }
+}
+@media (max-width: 767.98px) {
+    header {
+        padding: 100px 0 50px;
+        h1 {
+            font-size: 30px;
+        }
+    }
+}
