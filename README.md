@@ -61,12 +61,9 @@ Get started with a sweet set of features including:
  
 ## Getting Started
 
-Clone from Github 
-```
-git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git
-```
-- Run Yarn
-- Run Gulp
+1. Clone from Github ``` git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git ```
+2. Run ```Yarn```
+3. Run ```Gulp```
 
 OR
 - Goto /dist and open `index.html`
@@ -112,7 +109,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
  - [Datta Able Pro](https://codedthemes.com/item/datta-able-bootstrap-admin-template/)
  - [Gradient Able Pro](https://codedthemes.com/item/gradient-able-admin-template/)
- - [Able Pro](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403)
+ - [Able Pro](https://themeforest.net/item/able-pro-bootstrap-admin-dashboard-template/50170229)
  
 ## Follow us
  - [Website](https://berrydashboard.io)

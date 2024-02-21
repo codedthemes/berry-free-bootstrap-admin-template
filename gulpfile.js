@@ -1,19 +1,34 @@
-var gulp = require("gulp"), // main
-  sass = require("gulp-sass")(require("sass")), // scss compiler
-  del = require('del'), // demove directory
-  sourcemaps = require("gulp-sourcemaps"), // scss sourcemaps
-  uglify = require("gulp-uglify"), // minify js files
-  sourcemaps = require("gulp-sourcemaps"), // scss sourcemaps
-  cssmin = require("gulp-cssmin"), // minify css files
-  merge = require("merge-stream"), // mearge two task
-  babel = require("gulp-babel"), // convert next generation JavaScript, today.
-  npmlodash = require("lodash"), // perfoming oops in gulp
-  smushit = require("gulp-smushit"), // image optimizer
-  autoprefixer = require("gulp-autoprefixer"), // css propertys autoprefixer
-  cssbeautify = require("gulp-cssbeautify"), // css cssbeautify
-  fileinclude = require("gulp-file-include"), // include html files
-  browsersync = require("browser-sync"), // browser reload
-  htmlmin = require("gulp-htmlmin"); // html minify
+
+var gulp = require("gulp");
+var sass = require('gulp-sass')(require('sass'));
+var del = require('del');
+var sourcemaps = require("gulp-sourcemaps");
+var uglify = require("gulp-uglify");
+var sourcemaps = require("gulp-sourcemaps");
+var cssmin = require("gulp-cssmin");
+var merge = require("merge-stream");
+var babel = require("gulp-babel");
+var npmlodash = require("lodash");
+var smushit = require("gulp-smushit");
+var autoprefixer = require("gulp-autoprefixer");
+var cssbeautify = require("gulp-cssbeautify");
+var fileinclude = require("gulp-file-include");
+var browsersync = require("browser-sync");
+
+// =======================================================
+// -----------   Light Able Theme Configuration  -----------
+// =======================================================
+
+const caption_show = 'true'; // [ false , true ]
+const dark_navbar = 'false'; // [ false , true ]
+const preset_theme = 'preset-1'; // [ preset-1 to preset-10 ]
+const dark_layout = 'false'; // [ false , true , default ]
+const rtl_layout = 'false'; // [ false , true ]
+const box_container = 'false'; // [ falsse , true ]
+const font_name = 'Roboto'; // [ Roboto, Poppins, Inter ]
+const version = 'v2.0';
+
+// =======================================================
 
 //  [ scss compiler ] start
 gulp.task("sass", function () {
@@ -24,7 +39,6 @@ gulp.task("sass", function () {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
-    // .pipe(cssbeautify())
     .pipe(gulp.dest("dist/assets/css"));
 });
 //  [ scss compiler ] end
@@ -36,12 +50,12 @@ gulp.task("build", function () {
       "node_modules/bootstrap/dist/js/bootstrap.min.js",
       "node_modules/@popperjs/core/dist/umd/popper.min.js",
       "node_modules/simplebar/dist/simplebar.min.js",
+      "node_modules/feather-icons/dist/feather.min.js",
       "node_modules/clipboard/dist/clipboard.min.js",
-      "node_modules/apexcharts/dist/apexcharts.min.js",
+      "node_modules/apexcharts/dist/apexcharts.min.js"
     ],
     css: [
-      "node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "node_modules/animate.css/animate.min.css",
+      "node_modules/bootstrap/dist/css/bootstrap.min.css"
     ],
   };
   npmlodash(required_libs).forEach(function (assets, type) {
@@ -54,18 +68,47 @@ gulp.task("build", function () {
   var cpyassets = gulp
     .src(["src/assets/**/*.*", "!src/assets/scss/**/*.*"])
     .pipe(gulp.dest("dist/assets"));
-
-  return merge(cpyassets);
+      return merge(cpyassets);
 });
 
 //  [ Copy assets ] end
 
 //  [ build html ] start
+if (rtl_layout == "true") {
+  var rtltemp = "rtl"
+} else {
+  var rtltemp = "ltr"
+}
+
+if (dark_layout == 'true') {
+  var darklayouttemp = "dark"
+} else {
+  var darklayouttemp = "light"
+}
+if (dark_navbar == 'true') {
+  var  darknavbartemp = "dark"
+} else {
+  var  darknavbartemp = "light"
+}
+
+const layout = {
+  pc_caption_show: caption_show,
+  pc_preset_theme: preset_theme,
+  pc_dark_navbar: dark_navbar,
+  pc_dark_layout: dark_layout,
+  pc_rtl_layout: rtl_layout,
+  pc_box_container: box_container,
+  pc_font_name: font_name,
+  pc_theme_version: version,
+  bodySetup: 'data-pc-preset="' + preset_theme + '" data-pc-sidebar-theme="'+ darknavbartemp +'" data-pc-sidebar-caption="' + caption_show + '" data-pc-direction="' + rtltemp + '" data-pc-theme="' + darklayouttemp + '"',
+};
+
 gulp.task("build-html", function () {
   return gulp
     .src("src/html/**/*.html")
     .pipe(
       fileinclude({
+        context: layout,
         prefix: "@@",
         basepath: "@file",
         indent: true,
@@ -97,7 +140,6 @@ gulp.task("mincss", function () {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssbeautify())
-    .pipe(gulp.dest("dist/assets/css"))
     .pipe(cssmin())
     .pipe(gulp.dest("dist/assets/css"));
 });
@@ -119,27 +161,6 @@ gulp.task("uglify", function () {
   return merge(layoutjs, pagesjs);
 });
 //  [ uglify js ] end
-
-//  [ minify html ] start
-gulp.task("htmlmin", function () {
-  return gulp
-    .src("src/html/**/*.html")
-    .pipe(
-      fileinclude({
-        context: layout,
-        prefix: "@@",
-        basepath: "@file",
-        indent: true,
-      })
-    )
-    .pipe(
-      htmlmin({
-        collapseWhitespace: true,
-      })
-    )
-    .pipe(gulp.dest("dist"));
-});
-//  [ minify html ] end
 
 //  [ image optimizer ] start
 gulp.task("imgmin", function () {
@@ -174,9 +195,6 @@ gulp.task("watch", function () {
   gulp
     .watch("src/html/**/*.html", gulp.series("build-html"))
     .on("change", browsersync.reload);
-  gulp
-    .watch("src/doc/**/*.html", gulp.series("build"))
-    .on("change", browsersync.reload);
 });
 //  [ watch ] start
 const compile = gulp.parallel("browserSync", "watch");
@@ -186,15 +204,6 @@ gulp.task(
   gulp.series("cleandist", "build", "sass", "build-js", "build-html", "imgmin", compile)
 );
 //  [ Default task ] end
-
-//  [ watch minify ] start
-gulp.task("watch-minify", function () {
-  gulp.watch("src/assets/scss/**/*.scss", gulp.series("mincss"));
-  gulp.watch("src/assets/js/**/*.js", gulp.series("uglify"));
-  gulp.watch("src/html/**/*.html", gulp.series("htmlmin"));
-  gulp.watch("src/doc/**/*.html", gulp.series("build"));
-});
-//  [ watch minify ] start
 
 // build in production mode
 gulp.task(
