@@ -61,12 +61,9 @@ Get started with a sweet set of features including:
  
 ## Getting Started
 
-Clone from Github 
-```
-git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git
-```
-- Run Yarn
-- Run Gulp
+1. Clone from Github ``` git clone https://github.com/codedthemes/berry-free-bootstrap-admin-template.git ```
+2. Run ```Yarn```
+3. Run ```Gulp```
 
 OR
 - Goto /dist and open `index.html`
