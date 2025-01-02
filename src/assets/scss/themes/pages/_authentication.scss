@@ -17,7 +17,7 @@
       justify-content: center;
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 0;
@@ -56,7 +56,7 @@
         top: 0;
         left: 0;
 
-        +.card {
+        + .card {
           margin-top: 80px;
         }
       }
@@ -77,13 +77,13 @@
           display: none;
         }
 
-        &>* {
+        & > * {
           position: relative;
           z-index: 5;
         }
 
         &::after {
-          content: "";
+          content: '';
           background-image: url('../images/authentication/auth2-login.svg');
           background-repeat: no-repeat;
           background-position: bottom;
@@ -108,7 +108,7 @@
       align-items: center;
 
       .auth-form {
-        background: shift-color($primary, $soft-bg-level);
+        background: var(--bs-body-bg);
         min-height: 100vh;
         padding: 24px;
       }
@@ -124,13 +124,13 @@
           display: none;
         }
 
-        &>* {
+        & > * {
           position: relative;
           z-index: 5;
         }
 
         &::after {
-          content: "";
+          content: '';
           background-image: url('../images/authentication/auth2-login.svg');
           background-repeat: no-repeat;
           background-position: bottom;
@@ -256,14 +256,13 @@
   }
 }
 
-
 @keyframes wings {
   50% {
-      transform: translateY(-40px);
+    transform: translateY(-40px);
   }
 
   to {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 

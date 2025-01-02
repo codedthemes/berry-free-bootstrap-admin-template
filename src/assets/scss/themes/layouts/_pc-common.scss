@@ -5,7 +5,43 @@
 body {
   background-color: var(--pc-sidebar-background);
 }
-
+.loader-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 1);
+  z-index: 1034;
+  .loader-track {
+    height: 5px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    .loader-fill {
+      width: 300px;
+      height: 5px;
+      background: var(--bs-primary);
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      animation: hitZak 0.6s ease-in-out infinite alternate;
+    }
+  }
+}
+@keyframes hitZak {
+  0% {
+    left: 0;
+    transform: translateX(-1%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-99%);
+  }
+}
 .pc-container {
   $temp: $header-height + 61;
   position: relative;
@@ -21,17 +57,17 @@ body {
     padding-right: 20px;
     padding-top: 20px;
     @include media-breakpoint-down(xl) {
-      &.container{
+      &.container {
         max-width: 100%;
       }
     }
   }
 
-  .page-header+.row {
+  .page-header + .row {
     padding-top: 24px;
   }
 
-  .page-header+.pc-content {
+  .page-header + .pc-content {
     padding-top: calc(30px + 55px);
   }
 }
@@ -62,7 +98,6 @@ body {
     margin-right: 8px;
     padding-right: 8px;
     font-weight: 500;
-    border-right: 1px solid darken($body-bg, 10%);
   }
 
   .breadcrumb {
@@ -81,7 +116,7 @@ body {
         color: $primary;
       }
 
-      +.breadcrumb-item::before {
+      + .breadcrumb-item::before {
         position: relative;
         top: 2px;
       }
@@ -106,7 +141,7 @@ body {
     position: relative;
   }
 
-  >.container {
+  > .container {
     z-index: 5;
     position: relative;
     margin-top: -60px;
@@ -120,7 +155,7 @@ body {
     th {
       border: none;
 
-      +th {
+      + th {
         border-radius: 5px 5px 0 0;
         padding: 20px 0;
       }
@@ -138,12 +173,12 @@ body {
     th {
       text-align: right;
 
-      +td,
-      +th {
+      + td,
+      + th {
         text-align: center;
       }
 
-      +td {
+      + td {
         border-left: 1px solid $body-bg;
       }
     }
@@ -188,13 +223,11 @@ body {
       padding-right: 0;
     }
 
-    .page-header+.row,
-    .page-header+.pc-content
-    {
+    .page-header + .row,
+    .page-header + .pc-content {
       padding-left: 0;
       padding-right: 0;
     }
-
   }
 
   .page-header {
@@ -294,7 +327,6 @@ body {
 }
 
 .simplebar-content {
-
   &:before,
   &:after {
     content: ' ';
