@@ -16,8 +16,8 @@
       font-size: 1rem;
       font-weight: 500;
 
-      +p,
-      +small {
+      + p,
+      + small {
         margin-top: 10px;
 
         &:last-child {

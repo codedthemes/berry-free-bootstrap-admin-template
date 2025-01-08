@@ -7,7 +7,7 @@
 
   i {
     font-size: 18px;
-    &.ph-duotone{
+    &.ph-duotone {
       vertical-align: text-bottom;
     }
   }
@@ -243,7 +243,7 @@
 }
 .btn-pc-default {
   &:not(:hover) {
-    color: var(--bs-secondary);
+    color: rgba(var(--bs-body-color-rgb), 0.7);
   }
 }
 

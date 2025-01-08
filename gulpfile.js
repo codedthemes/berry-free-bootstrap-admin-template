@@ -26,7 +26,7 @@ const dark_layout = 'false'; // [ false , true , default ]
 const rtl_layout = 'false'; // [ false , true ]
 const box_container = 'false'; // [ falsse , true ]
 const font_name = 'Roboto'; // [ Roboto, Poppins, Inter ]
-const version = 'v2.0';
+const version = 'v2.1.0';
 
 // =======================================================
 

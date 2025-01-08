@@ -1,60 +1,60 @@
 // =======================================
 //   List of variables for Preset color
 // =======================================
-$brand-color1 : linear-gradient(83.31deg, #1DE9B6 21.22%, #1DC4E9 88.54%);
-$brand-color2 : linear-gradient(206.48deg, #A389D4 11.14%, #899ED4 104.6%);
-$brand-color3 : linear-gradient(207.92deg, #0398F2 11.42%, #38B9E7 106.55%);
-$brand-color4 : linear-gradient(162.57deg, #C5ECF9 11.95%, #C4B4E4 97.32%);
+$brand-color1: linear-gradient(83.31deg, #1de9b6 21.22%, #1dc4e9 88.54%);
+$brand-color2: linear-gradient(206.48deg, #a389d4 11.14%, #899ed4 104.6%);
+$brand-color3: linear-gradient(207.92deg, #0398f2 11.42%, #38b9e7 106.55%);
+$brand-color4: linear-gradient(162.57deg, #c5ecf9 11.95%, #c4b4e4 97.32%);
 
 $preset-colors: (
   preset-1: (
-    body: #e3f2fd,
+    body: #eef2f6,
     primary: #2196f3,
-    primary-dark: #1C76DA,
+    primary-dark: #1c76da,
     secondary: #673ab7,
-    secondary-dark: #542CA7
+    secondary-dark: #542ca7
   ),
   preset-2: (
-    body: #eceff1,
+    body: #eef2f6,
     primary: #607d8b,
-    primary-dark: #4E6A78,
+    primary-dark: #4e6a78,
     secondary: #009688,
     secondary-dark: #008375
   ),
   preset-3: (
-    body: #ecedf1,
+    body: #eef2f6,
     primary: #203461,
-    primary-dark: #18274F,
+    primary-dark: #18274f,
     secondary: #ec407a,
-    secondary-dark: #E73267
+    secondary-dark: #e73267
   ),
   preset-4: (
-    body: #eceff1,
+    body: #eef2f6,
     primary: #16595a,
     primary-dark: #104848,
     secondary: #c77e23,
-    secondary-dark: #BA6B1A
+    secondary-dark: #ba6b1a
   ),
   preset-5: (
-    body: #e3e8e8,
+    body: #eef2f6,
     primary: #173e43,
     primary-dark: #113034,
     secondary: #3fb0ac,
-    secondary-dark: #31A09B
+    secondary-dark: #31a09b
   ),
   preset-6: (
-    body: #e2e5e8,
+    body: #eef2f6,
     primary: #0a2342,
-    primary-dark: #071A33,
+    primary-dark: #071a33,
     secondary: #2ca58d,
-    secondary-dark: #21937A
+    secondary-dark: #21937a
   ),
   preset-7: (
-    body: #eeedfd,
+    body: #eef2f6,
     primary: #3f51b5,
-    primary-dark: #3140A5,
+    primary-dark: #3140a5,
     secondary: #3f51b5,
-    secondary-dark: #3140A5
+    secondary-dark: #3140a5
   )
 );
 $dark-preset-colors: (
@@ -81,106 +81,105 @@ $dark-preset-colors: (
   )
 );
 
-$blue-100: #BEDCF6;
-$blue-200: #93C4F1;
-$blue-300: #67ACEB;
-$blue-400: #479BE6;
-$blue-500: #2689E2;
-$blue-600: #2281DF;
-$blue-700: #1C76DA;
-$blue-800: #176CD6;
-$blue-900: #0D59CF;
+$blue-100: #bedcf6;
+$blue-200: #93c4f1;
+$blue-300: #67aceb;
+$blue-400: #479be6;
+$blue-500: #2689e2;
+$blue-600: #2281df;
+$blue-700: #1c76da;
+$blue-800: #176cd6;
+$blue-900: #0d59cf;
 
-$indigo-100: #D1B7FB;
-$indigo-200: #B388F9;
-$indigo-300: #9458F6;
-$indigo-400: #7D34F4;
-$indigo-500: #6610F2;
-$indigo-600: #5E0EF0;
-$indigo-700: #530CEE;
-$indigo-800: #4909EC;
-$indigo-900: #3805E8;
+$indigo-100: #d1b7fb;
+$indigo-200: #b388f9;
+$indigo-300: #9458f6;
+$indigo-400: #7d34f4;
+$indigo-500: #6610f2;
+$indigo-600: #5e0ef0;
+$indigo-700: #530cee;
+$indigo-800: #4909ec;
+$indigo-900: #3805e8;
 
-$purple-100: #D1C4E9;
-$purple-200: #B39DDB;
-$purple-300: #9575CD;
-$purple-400: #7E58C2;
-$purple-500: #673AB7;
-$purple-600: #5F34B0;
-$purple-700: #542CA7;
-$purple-800: #4A259F;
+$purple-100: #d1c4e9;
+$purple-200: #b39ddb;
+$purple-300: #9575cd;
+$purple-400: #7e58c2;
+$purple-500: #673ab7;
+$purple-600: #5f34b0;
+$purple-700: #542ca7;
+$purple-800: #4a259f;
 $purple-900: #391890;
 
-$pink-100: #F8C5DD;
-$pink-200: #F49FC6;
-$pink-300: #EF78AF;
-$pink-400: #EB5B9D;
-$pink-500: #E83E8C;
-$pink-600: #E53884;
-$pink-700: #E23079;
-$pink-800: #DE286F;
-$pink-900: #D81B5C;
+$pink-100: #f8c5dd;
+$pink-200: #f49fc6;
+$pink-300: #ef78af;
+$pink-400: #eb5b9d;
+$pink-500: #e83e8c;
+$pink-600: #e53884;
+$pink-700: #e23079;
+$pink-800: #de286f;
+$pink-900: #d81b5c;
 
-$red-100: #FCC7C3;
-$red-200: #FAA19B;
-$red-300: #F77B72;
-$red-400: #F65F54;
-$red-500: #F44336;
-$red-600: #F33D30;
-$red-700: #F13429;
-$red-800: #EF2C22;
-$red-900: #EC1E16;
+$red-100: #fcc7c3;
+$red-200: #faa19b;
+$red-300: #f77b72;
+$red-400: #f65f54;
+$red-500: #f44336;
+$red-600: #f33d30;
+$red-700: #f13429;
+$red-800: #ef2c22;
+$red-900: #ec1e16;
 
-$orange-100: #FED8B9;
-$orange-200: #FEBF8A;
-$orange-300: #FEA55B;
-$orange-400: #FD9137;
-$orange-500: #FD7E14;
-$orange-600: #FD7612;
-$orange-700: #FC6B0E;
-$orange-800: #FC610B;
-$orange-900: #FC4E06;
+$orange-100: #fed8b9;
+$orange-200: #febf8a;
+$orange-300: #fea55b;
+$orange-400: #fd9137;
+$orange-500: #fd7e14;
+$orange-600: #fd7612;
+$orange-700: #fc6b0e;
+$orange-800: #fc610b;
+$orange-900: #fc4e06;
 
-$yellow-100: #FFECB5;
-$yellow-200: #FFE083;
-$yellow-300: #FFD451;
-$yellow-400: #FFCA2C;
-$yellow-500: #FFC107;
-$yellow-600: #FFBB06;
-$yellow-700: #FFB305;
-$yellow-800: #FFAB04;
-$yellow-900: #FF9E02;
+$yellow-100: #ffecb5;
+$yellow-200: #ffe083;
+$yellow-300: #ffd451;
+$yellow-400: #ffca2c;
+$yellow-500: #ffc107;
+$yellow-600: #ffbb06;
+$yellow-700: #ffb305;
+$yellow-800: #ffab04;
+$yellow-900: #ff9e02;
 
-$green-100: #B3EFCB;
-$green-200: #80E4A9;
-$green-300: #4DD987;
-$green-400: #26D06D;
-$green-500: #00C853;
-$green-600: #00C24C;
-$green-700: #00BB42;
-$green-800: #00B439;
-$green-900: #00A729;
+$green-100: #b3efcb;
+$green-200: #80e4a9;
+$green-300: #4dd987;
+$green-400: #26d06d;
+$green-500: #00c853;
+$green-600: #00c24c;
+$green-700: #00bb42;
+$green-800: #00b439;
+$green-900: #00a729;
 
-$teal-100: #BCEFE0;
-$teal-200: #90E4CB;
-$teal-300: #63D9B6;
-$teal-400: #41D1A7;
-$teal-500: #20C997;
-$teal-600: #1CC38F;
-$teal-700: #18BC84;
-$teal-800: #13B57A;
-$teal-900: #0BA969;
+$teal-100: #bcefe0;
+$teal-200: #90e4cb;
+$teal-300: #63d9b6;
+$teal-400: #41d1a7;
+$teal-500: #20c997;
+$teal-600: #1cc38f;
+$teal-700: #18bc84;
+$teal-800: #13b57a;
+$teal-900: #0ba969;
 
-$cyan-100: #C5EFF3;
-$cyan-200: #9FE4EB;
-$cyan-300: #78D9E2;
-$cyan-400: #5BD1DC;
-$cyan-500: #3EC9D6;
-$cyan-600: #38C3D1;
-$cyan-700: #30BCCC;
-$cyan-800: #28B5C6;
-$cyan-900: #1BA9BC;
-
+$cyan-100: #c5eff3;
+$cyan-200: #9fe4eb;
+$cyan-300: #78d9e2;
+$cyan-400: #5bd1dc;
+$cyan-500: #3ec9d6;
+$cyan-600: #38c3d1;
+$cyan-700: #30bccc;
+$cyan-800: #28b5c6;
+$cyan-900: #1ba9bc;
 
 $white: #ffffff;
 $gray-100: #f8f9fa;

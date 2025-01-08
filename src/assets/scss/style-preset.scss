@@ -8,22 +8,21 @@ File: style.css
 =================================================================================== */
 
 // main framework
-@import "settings/color-variables";
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
-@import "settings/bootstrap-variables";
-@import "settings/theme-variables";
+@import 'settings/color-variables';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/variables-dark';
+@import 'settings/bootstrap-variables';
+@import 'settings/theme-variables';
 
-@import "node_modules/bootstrap/scss/mixins";
-@each $name,
-$value in $preset-colors {
-  [data-pc-preset="#{$name}"] {
-    $pc-body: map-get($value, "body");
-    $pc-primary: map-get($value, "primary");
-    $pc-primary-dark: map-get($value, "primary-dark");
-    $pc-secondary: map-get($value, "secondary");
-    $pc-secondary-dark: map-get($value, "secondary-dark");
+@import 'node_modules/bootstrap/scss/mixins';
+@each $name, $value in $preset-colors {
+  [data-pc-preset='#{$name}'] {
+    $pc-body: map-get($value, 'body');
+    $pc-primary: map-get($value, 'primary');
+    $pc-primary-dark: map-get($value, 'primary-dark');
+    $pc-secondary: map-get($value, 'secondary');
+    $pc-secondary-dark: map-get($value, 'secondary-dark');
 
     $primary-color-rgb: to-rgb($pc-primary);
     $secondary-color-rgb: to-rgb($pc-secondary);
@@ -42,20 +41,20 @@ $value in $preset-colors {
 
     --bs-link-color: #{$pc-primary};
     --bs-link-color-rgb: #{$primary-color-rgb};
-    --bs-link-hover-color : #{shift-color($pc-primary, $link-shade-percentage)};
+    --bs-link-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
     --bs-link-hover-color-rgb: to-rgb(shift-color($pc-secondary, $link-shade-percentage));
 
     --dt-row-selected: #{to-rgb($pc-primary)};
-    --bs-body-bg : #{ $pc-body };
+    --bs-body-bg: #{$pc-body};
 
     $pctheme-colors: (
-      "primary": $pc-primary,
-      "secondary": $pc-secondary
+      'primary': $pc-primary,
+      'secondary': $pc-secondary
     );
 
     $pctheme-dark-colors: (
-      "primary-dark": $pc-primary-dark,
-      "secondary-dark": $pc-secondary-dark
+      'primary-dark': $pc-primary-dark,
+      'secondary-dark': $pc-secondary-dark
     );
     @each $color, $value in $pctheme-dark-colors {
       .bg-#{$color} {
@@ -64,314 +63,324 @@ $value in $preset-colors {
       }
     }
 
-  .pc-sidebar {
-    .pc-item {
+    .pc-sidebar {
+      .pc-item {
+        &.active,
+        &:focus,
+        &:hover {
+          > .pc-link {
+            color: $pc-secondary;
 
-      &.active,
-      &:focus,
-      &:hover {
-        >.pc-link {
-          color: $pc-secondary;
+            .pc-micon {
+              i,
+              svg {
+                color: $pc-secondary;
+              }
+            }
+          }
+        }
+      }
 
-          .pc-micon {
-
-            i,
-            svg {
-              color: $pc-secondary;
+      .pc-submenu {
+        .pc-item {
+          &:hover,
+          &.active {
+            &:before {
+              background: $pc-secondary;
             }
           }
         }
       }
     }
 
-    .pc-submenu {
-      .pc-item {
+    .btn-link {
+      --bs-btn-color: #{$pc-primary};
+      --bs-btn-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
+      --bs-btn-active-color: #{shift-color($pc-primary, $link-shade-percentage)};
+    }
 
-        &:hover,
-        &.active {
-          &:before {
-            background: $pc-secondary;
-          }
-        }
+    .accordion {
+      --#{$prefix}accordion-btn-focus-border-color: #{$pc-primary};
+      --#{$prefix}accordion-btn-focus-box-shadow: 0 0 0 #{$input-btn-focus-width} #{rgba($pc-primary, $input-btn-focus-color-opacity)};
+      --#{$prefix}accordion-active-color: #{$pc-primary};
+      --#{$prefix}accordion-active-bg: #{$pc-primary-light};
+      --#{$prefix}accordion-btn-active-icon: #{escape-svg(
+          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$pc-primary}'><path fill-rule=' evenodd' d=' M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>")
+        )};
+    }
+
+    .list-group {
+      --bs-list-group-active-bg: #{$pc-primary};
+      --bs-list-group-active-border-color: #{$pc-primary};
+    }
+
+    .nav {
+      --bs-nav-link-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
+    }
+
+    .nav-pills {
+      --bs-nav-pills-link-active-bg: #{$pc-primary};
+    }
+
+    .pagination {
+      --bs-pagination-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
+      --bs-pagination-focus-color: #{shift-color($pc-primary, $link-shade-percentage)};
+      --bs-pagination-focus-box-shadow: 0 0 0 #{$input-btn-focus-width} #{rgba($pc-primary, $input-btn-focus-color-opacity)};
+      --bs-pagination-active-bg: #{$pc-primary};
+      --bs-pagination-active-border-color: #{$pc-primary};
+    }
+
+    .progress {
+      --bs-progress-bar-bg: #{$pc-primary};
+    }
+    .slider-selection {
+      background-image: linear-gradient(to bottom, lighten($pc-primary, 25%) 0, lighten($pc-primary, 25%) 100%);
+
+      &.tick-slider-selection {
+        background-image: linear-gradient(to bottom, lighten($pc-primary, 20%) 0, lighten($pc-primary, 20%) 100%);
       }
     }
-  }
+    .swal-button {
+      &:not([disabled]):hover {
+        background-color: darken($pc-primary, 5%);
+      }
 
-  .btn-link {
-    --bs-btn-color: #{$pc-primary};
-    --bs-btn-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
-    --bs-btn-active-color: #{shift-color($pc-primary, $link-shade-percentage)};
-  }
+      &:active {
+        background-color: darken($pc-primary, 5%);
+      }
 
-  .accordion {
-    --#{$prefix}accordion-btn-focus-border-color: #{$pc-primary};
-    --#{$prefix}accordion-btn-focus-box-shadow: 0 0 0 #{$input-btn-focus-width} #{rgba($pc-primary, $input-btn-focus-color-opacity)};
-    --#{$prefix}accordion-active-color: #{$pc-primary};
-    --#{$prefix}accordion-active-bg: #{$pc-primary-light};
-    --#{$prefix}accordion-btn-active-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$pc-primary}'><path fill-rule=' evenodd' d=' M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"))};
-
-  }
-
-  .list-group {
-    --bs-list-group-active-bg: #{$pc-primary};
-    --bs-list-group-active-border-color: #{$pc-primary};
-  }
-
-  .nav {
-    --bs-nav-link-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
-  }
-
-  .nav-pills {
-    --bs-nav-pills-link-active-bg: #{$pc-primary};
-  }
-
-  .pagination {
-    --bs-pagination-hover-color: #{shift-color($pc-primary, $link-shade-percentage)};
-    --bs-pagination-focus-color: #{shift-color($pc-primary, $link-shade-percentage)};
-    --bs-pagination-focus-box-shadow: 0 0 0 #{$input-btn-focus-width} #{rgba($pc-primary, $input-btn-focus-color-opacity)};
-    --bs-pagination-active-bg: #{$pc-primary};
-    --bs-pagination-active-border-color: #{$pc-primary};
-  }
-
-  .progress {
-    --bs-progress-bar-bg: #{$pc-primary};
-  }
-  .slider-selection {
-    background-image: linear-gradient(to bottom, lighten($pc-primary, 25%) 0, lighten($pc-primary, 25%) 100%);
-
-    &.tick-slider-selection {
-      background-image: linear-gradient(to bottom, lighten($pc-primary, 20%) 0, lighten($pc-primary, 20%) 100%);
+      &:focus {
+        box-shadow:
+          0 0 0 1px #fff,
+          0 0 0 3px transparentize($pc-primary, 0.71);
+      }
     }
-  }
-  .swal-button {
-    &:not([disabled]):hover {
-      background-color: darken($pc-primary, 5%);
-    }
-
-    &:active {
-      background-color: darken($pc-primary, 5%);
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 3px transparentize($pc-primary, 0.71);
-    }
-  }
-  .swal-content__input:focus {
-    border-color: transparentize($pc-primary, 0.71);
-  }
-
-  .swal-content__textarea {
-    &:focus {
+    .swal-content__input:focus {
       border-color: transparentize($pc-primary, 0.71);
     }
-  }
 
-  .swal2-styled {
-    &:focus {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba($pc-primary, 0.4) !important;
-    }
-  }
-
-  .slider-tick {
-    &.in-selection {
-      background-image: linear-gradient(to bottom, lighten($pc-primary, 20%) 0, lighten($pc-primary, 20%) 100%);
-    }
-  }
-
-  @each $color, $value in $pctheme-colors {
-    $value-light: shift-color($value, $soft-bg-level);
-    .pc-header .pc-head-link.head-link-#{$color} {
-      background: $value-light;
-      color: $value;
-
-      >i {
-        color: $value;
+    .swal-content__textarea {
+      &:focus {
+        border-color: transparentize($pc-primary, 0.71);
       }
+    }
 
-      &:hover {
-        background: $value;
-        color: #fff;
+    .swal2-styled {
+      &:focus {
+        box-shadow:
+          0 0 0 1px #fff,
+          0 0 0 3px rgba($pc-primary, 0.4) !important;
+      }
+    }
 
-        >i {
+    .slider-tick {
+      &.in-selection {
+        background-image: linear-gradient(to bottom, lighten($pc-primary, 20%) 0, lighten($pc-primary, 20%) 100%);
+      }
+    }
+
+    @each $color, $value in $pctheme-colors {
+      $value-light: shift-color($value, $soft-bg-level);
+      .pc-header .pc-head-link.head-link-#{$color} {
+        background: $value-light;
+        color: $value;
+
+        > i {
+          color: $value;
+        }
+
+        &:hover {
+          background: $value;
           color: #fff;
-        }
-      }
-    }
-    .bg-light-#{$color} {
-      background: $value-light;
-      color: $value;
-    }
-    .link-#{$color} {
-      color: $value !important;
 
-      @if $link-shade-percentage !=0 {
-
-        &:hover,
-        &:focus {
-          color: if(color-contrast($value)==$color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage)) !important; // stylelint-disable-line declaration-no-important
-        }
-      }
-    }
-    .btn-#{$color} {
-      @include button-variant($value, $value);
-    }
-    .btn-outline-#{$color} {
-      @include button-outline-variant($value);
-    }
-    .text-bg-#{$color} {
-      color: color-contrast($value) if($enable-important-utilities, !important, null);
-      background-color: RGBA($primary-color-rgb, var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
-    }
-    .alert-#{$color} {
-      $alert-background: shift-color($value, $alert-bg-scale);
-      $alert-border: shift-color($value, $alert-border-scale);
-      $alert-color: shift-color($value, $alert-color-scale);
-
-      --#{$prefix}alert-color: #{$alert-color};
-      --#{$prefix}alert-bg: #{$alert-background};
-      --#{$prefix}alert-border-color: #{$alert-border};
-      --#{$prefix}alert-link-color: #{shade-color($alert-color, 20%)};
-    }
-    .list-group-item-#{$color} {
-      color: $value;
-      background-color: $value-light;
-    }
-    .form-check {
-      .form-check-input {
-        &.input-#{$color} {
-          &:checked {
-            border-color: $value;
-            background-color: $value;
+          > i {
+            color: #fff;
           }
         }
+      }
+      .bg-light-#{$color} {
+        background: $value-light;
+        color: $value;
+      }
+      .link-#{$color} {
+        color: $value !important;
 
-        &.input-light-#{$color} {
-          &:checked {
-            border-color: $value-light;
-            background-color: $value-light;
-
-            &[type='checkbox'] {
-              background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$value}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"));
-            }
-
-            &[type='radio'] {
-              background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>"));
-            }
-          }
-        }
-
-        &.input-#{$color},
-        &.input-light-#{$color} {
+        @if $link-shade-percentage !=0 {
+          &:hover,
           &:focus {
+            color: if(
+              color-contrast($value) ==$color-contrast-light,
+              shade-color($value, $link-shade-percentage),
+              tint-color($value, $link-shade-percentage)
+            ) !important; // stylelint-disable-line declaration-no-important
+          }
+        }
+      }
+      .btn-#{$color} {
+        @include button-variant($value, $value);
+      }
+      .btn-outline-#{$color} {
+        @include button-outline-variant($value);
+      }
+      .text-bg-#{$color} {
+        color: color-contrast($value) if($enable-important-utilities, !important, null);
+        background-color: RGBA($primary-color-rgb, var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+      }
+      .alert-#{$color} {
+        $alert-background: shift-color($value, $alert-bg-scale);
+        $alert-border: shift-color($value, $alert-border-scale);
+        $alert-color: shift-color($value, $alert-color-scale);
 
-            &[type='checkbox'],
-            &[type='radio'] {
-              box-shadow: 0 0 0 0.2rem rgba($value, 0.25);
+        --#{$prefix}alert-color: #{$alert-color};
+        --#{$prefix}alert-bg: #{$alert-background};
+        --#{$prefix}alert-border-color: #{$alert-border};
+        --#{$prefix}alert-link-color: #{shade-color($alert-color, 20%)};
+      }
+      .list-group-item-#{$color} {
+        color: $value;
+        background-color: $value-light;
+      }
+      .form-check {
+        .form-check-input {
+          &.input-#{$color} {
+            &:checked {
               border-color: $value;
+              background-color: $value;
+            }
+          }
+
+          &.input-light-#{$color} {
+            &:checked {
+              border-color: $value-light;
+              background-color: $value-light;
+
+              &[type='checkbox'] {
+                background-image: escape-svg(
+                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$value}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>")
+                );
+              }
+
+              &[type='radio'] {
+                background-image: escape-svg(
+                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>")
+                );
+              }
+            }
+          }
+
+          &.input-#{$color},
+          &.input-light-#{$color} {
+            &:focus {
+              &[type='checkbox'],
+              &[type='radio'] {
+                box-shadow: 0 0 0 0.2rem rgba($value, 0.25);
+                border-color: $value;
+              }
+            }
+          }
+        }
+
+        &.form-switch {
+          .form-check-input.input-light-#{$color} {
+            &:checked {
+              background-image: escape-svg(
+                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$value}'/></svg>")
+              );
             }
           }
         }
       }
+      .btn-light-#{$color} {
+        background: $value-light;
+        color: $value;
+        border-color: $value-light;
 
-      &.form-switch {
-        .form-check-input.input-light-#{$color} {
-          &:checked {
-            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$value}'/></svg>"));
+        .material-icons-two-tone {
+          background-color: $value;
+        }
+
+        &:hover {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+          .material-icons-two-tone {
+            background-color: #fff;
+          }
+        }
+
+        &.focus,
+        &:focus {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+          .material-icons-two-tone {
+            background-color: #fff;
+          }
+        }
+
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show > &.dropdown-toggle {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+          .material-icons-two-tone {
+            background-color: #fff;
           }
         }
       }
-    }
-    .btn-light-#{$color} {
-      background: $value-light;
-      color: $value;
-      border-color: $value-light;
+      .btn-check:active,
+      .btn-check:checked {
+        + .btn-light-#{$color} {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+        }
+      }
+      .btn-link-#{$color} {
+        background: transparent;
+        color: $value;
+        border-color: transparent;
 
-      .material-icons-two-tone {
+        .material-icons-two-tone {
+          background-color: $value;
+        }
+
+        &:hover {
+          background: $value-light;
+          color: $value;
+          border-color: $value-light;
+        }
+
+        &.focus,
+        &:focus {
+          background: $value-light;
+          color: $value;
+          border-color: $value-light;
+        }
+
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show > &.dropdown-toggle {
+          background: $value-light;
+          color: $value;
+          border-color: $value-light;
+        }
+      }
+      .btn-check:active,
+      .btn-check:checked {
+        + .btn-link-#{$color} {
+          background: $value-light;
+          color: $value;
+          border-color: $value-light;
+        }
+      }
+      .material-icons-two-tone.text-#{$color} {
         background-color: $value;
       }
-
-      &:hover {
-        background: $value;
-        color: #fff;
-        border-color: $value;
-        .material-icons-two-tone {
-          background-color: #fff;
-        }
-      }
-
-      &.focus,
-      &:focus {
-        background: $value;
-        color: #fff;
-        border-color: $value;
-        .material-icons-two-tone {
-          background-color: #fff;
-        }
-      }
-
-      &:not(:disabled):not(.disabled).active,
-      &:not(:disabled):not(.disabled):active,
-      .show>&.dropdown-toggle {
-        background: $value;
-        color: #fff;
-        border-color: $value;
-        .material-icons-two-tone {
-          background-color: #fff;
-        }
-      }
+      @include table-variant(#{$color}, $value);
     }
-    .btn-check:active,
-    .btn-check:checked {
-      +.btn-light-#{$color} {
-        background: $value;
-        color: #fff;
-        border-color: $value;
-      }
-    }
-    .btn-link-#{$color} {
-      background: transparent;
-      color: $value;
-      border-color: transparent;
-  
-      .material-icons-two-tone {
-        background-color: $value;
-      }
-  
-      &:hover {
-        background: $value-light;
-        color: $value;
-        border-color: $value-light;
-      }
-  
-      &.focus,
-      &:focus {
-        background: $value-light;
-        color: $value;
-        border-color: $value-light;
-      }
-  
-      &:not(:disabled):not(.disabled).active,
-      &:not(:disabled):not(.disabled):active,
-      .show>&.dropdown-toggle {
-        background: $value-light;
-        color: $value;
-        border-color: $value-light;
-      }
-    }
-    .btn-check:active,
-    .btn-check:checked {
-      +.btn-link-#{$color} {
-        background: $value-light;
-        color: $value;
-        border-color: $value-light;
-      }
-    }
-    .material-icons-two-tone.text-#{$color}{
-      background-color:$value;
-    }
-    @include table-variant(#{$color}, $value);
+    // =================
+    // =================
   }
-  // =================
-  // =================
-}
 }
