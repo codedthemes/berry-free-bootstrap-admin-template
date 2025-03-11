@@ -75,7 +75,6 @@ Get started with a sweet set of features including:
 | -                                             | ✓ Design files (Figma)                                                   |
 | -                                             | ✓ 6+ color Options                                                       |
 | -                                             | ✓ RTL                                                                    |
-| -                                             | ✓ JWT, Firebase, Auth0 authentications                                   |
 | -                                             | ✓ [More components](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)   |
 
 ## Documentation
@@ -120,7 +119,7 @@ Get started with a sweet set of features including:
 
 | Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/mantis-free-vuetify-vuejs-admin-template/)                                        | [**Pro**](https://codedthemes.com/item/mantis-vue-admin-template/)</span>  |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/mantis-bootstrap-free-admin-template/)                                        | [**Pro**](https://codedthemes.com/item/mantis-bootstrap-admin-dashboard/)</span>  |
 | <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/datta-able-bootstrap-lite/)                                        | [**Pro**](https://codedthemes.com/item/datta-able-bootstrap-admin-template/)</span>  |
 | <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Gradient%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/gradient-able-bootstrap-lite/)                                        | [**Pro**](https://codedthemes.com/item/gradient-able-admin-template/)</span>  |
 
