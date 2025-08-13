@@ -1,4 +1,4 @@
-# Berry Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
+# Berry Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.com&via=codedthemes&hashtags=bootstrap,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-bootstrap-admin-template/blob/master/LICENSE)
@@ -10,7 +10,7 @@ Berry is a free Bootstrap admin dashboard template. It is designed to deliver th
 
 ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine
 
-![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-bootstrap-repo-1.jpg)
+![IMG_8566.jpg](https://berrydashboard.com/imp-images/berry-github-free-bootstrap-repo-1.jpg)
 
 ## Table of contents
 
@@ -45,10 +45,10 @@ OR
 ## Download
 
 - Berry Free
-  - [Live Preview](https://berrydashboard.io/bootstrap/free/dashboard/index.html)
+  - [Live Preview](https://berrydashboard.com/bootstrap/free/dashboard/index.html)
   - [Download](https://github.com/codedthemes/berry-free-bootstrap-admin-template)
 - Berry
-  - [Live Preview](https://berrydashboard.io/bootstrap/default/dashboard/index.html)
+  - [Live Preview](https://berrydashboard.com/bootstrap/default/dashboard/index.html)
   - [Download](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)
 
 ## Why Berry?
@@ -66,7 +66,7 @@ Get started with a sweet set of features including:
 
 [Pro version](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) of Berry react template contains features like Mutiple Layouts, Apps, Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
-| [Berry Free](https://berrydashboard.io/bootstrap/free/dashboard/index.html) | [Berry](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
+| [Berry Free](https://berrydashboard.com/bootstrap/free/dashboard/index.html) | [Berry](https://codedthemes.com/item/berry-bootstrap-5-admin-template/) |
 | --------------------------------------------- | :----------------------------------------------------------------------- |
 | **9** Demo pages                              | **45+** demo pages                                                       |
 | -                                             | ✓ Multi-language                                                         |

@@ -10,29 +10,29 @@ This page (folder) is a sneak peek into the premium features available in <b>ver
 
 ## Included in the Pro Version:
 
-[🚀 Dashboards](https://berrydashboard.io/bootstrap/default/dashboard/index.html) : Advanced, real-time dashboards with interactive data visualizations for actionable insights.
+[🚀 Dashboards](https://berrydashboard.com/bootstrap/default/dashboard/index.html) : Advanced, real-time dashboards with interactive data visualizations for actionable insights.
 
-[📦 Widgets](https://berrydashboard.io/bootstrap/default/widget/w_statistics.html) : A curated library of pre-built widgets to streamline your development process and enhance functionality.
+[📦 Widgets](https://berrydashboard.com/bootstrap/default/widget/w_statistics.html) : A curated library of pre-built widgets to streamline your development process and enhance functionality.
 
-[⚙️ Admin Panel](https://berrydashboard.io/bootstrap/default/admins/course-dashboard.html) : Fully responsive and user-friendly admin panels designed for efficient management and control.
+[⚙️ Admin Panel](https://berrydashboard.com/bootstrap/default/admins/course-dashboard.html) : Fully responsive and user-friendly admin panels designed for efficient management and control.
 
-[🔧 Components](https://berrydashboard.io/bootstrap/default/elements/bc_button.html) : A wide range of reusable and customizable UI components to suit diverse project needs.
+[🔧 Components](https://berrydashboard.com/bootstrap/default/elements/bc_button.html) : A wide range of reusable and customizable UI components to suit diverse project needs.
 
-[🚀 Advanced Components](https://berrydashboard.io/bootstrap/default/elements/ac_alert.html) : Sophisticated tools and features to amplify your project’s design and interactivity.
+[🚀 Advanced Components](https://berrydashboard.com/bootstrap/default/elements/ac_alert.html) : Sophisticated tools and features to amplify your project’s design and interactivity.
 
-[📝 Forms](https://berrydashboard.io/bootstrap/default/forms/form_elements.html) : Dynamic, customizable forms with advanced validation options for a smooth user experience.
+[📝 Forms](https://berrydashboard.com/bootstrap/default/forms/form_elements.html) : Dynamic, customizable forms with advanced validation options for a smooth user experience.
 
-[📊 Tables](https://berrydashboard.io/bootstrap/default/table/tbl_dt-simple.html) : Interactive, structured tables with sorting, filtering, and pagination features for better data management.
+[📊 Tables](https://berrydashboard.com/bootstrap/default/table/tbl_dt-simple.html) : Interactive, structured tables with sorting, filtering, and pagination features for better data management.
 
-[📈 Charts](https://berrydashboard.io/bootstrap/default/chart/chart-apex.html) : Beautifully designed charts powered by modern libraries for impactful data visualization.
+[📈 Charts](https://berrydashboard.com/bootstrap/default/chart/chart-apex.html) : Beautifully designed charts powered by modern libraries for impactful data visualization.
 
-[🔒 Authentication](https://berrydashboard.io/bootstrap/default/pages/login-v1.html) : Secure pages for login, registration, and password recovery, ensuring robust user authentication and management.
+[🔒 Authentication](https://berrydashboard.com/bootstrap/default/pages/login-v1.html) : Secure pages for login, registration, and password recovery, ensuring robust user authentication and management.
 
-[🛒 E-commerce App](https://berrydashboard.io/bootstrap/default/application/ecom_product.html) : A complete e-commerce management solution for handling products, inventory, and transactions.
+[🛒 E-commerce App](https://berrydashboard.com/bootstrap/default/application/ecom_product.html) : A complete e-commerce management solution for handling products, inventory, and transactions.
 
-[💬 Chat Messages](https://berrydashboard.io/bootstrap/default/application/chat.html) : Integrated chat functionality to boost communication within your application.
+[💬 Chat Messages](https://berrydashboard.com/bootstrap/default/application/chat.html) : Integrated chat functionality to boost communication within your application.
 
-[👤 User Profile](https://berrydashboard.io/bootstrap/default/application/social-profile.html) : A sleek, customizable user profile page for managing user information and settings effortlessly.
+[👤 User Profile](https://berrydashboard.com/bootstrap/default/application/social-profile.html) : A sleek, customizable user profile page for managing user information and settings effortlessly.
 
 ## Why Upgrade to the Pro Version?
 
